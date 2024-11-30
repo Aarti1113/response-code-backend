@@ -19,6 +19,10 @@ const listRoutes = require('./routes/lists');
 app.use('/api/auth', authRoutes);
 app.use('/lists', listRoutes);
 
+app.get("/warm-up", (req, res) => {
+  res.json({msg: "You are hitting the warm-up route"});
+})
+
 // MongoDB Connection
 
 mongoose
